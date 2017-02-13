@@ -16,7 +16,7 @@ librairy :
 	include/
 		vos.h
 
-to_copy :
+start   :
 	Makefile
 	include/
 		my.h

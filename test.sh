@@ -47,7 +47,7 @@ echo -e "\033[34m-------------------------------------------------------\033[0m
 ## création du repo :
 
 blih -u $SCRIPT_INIT repository create $nom
-blih -u $SCRIPT_INIT repository setacl ramassage-tek r
+blih -u $SCRIPT_INIT repository setacl $nom ramassage-tek r
 echo -e "\033[31mRepo crée && ACL appliqué
 "
 
@@ -65,23 +65,23 @@ echo -e "\033[31mDébut du scrypt :
 
 ## fill du dossier
 mkdir include
-cp ~/epitech/script/start/include/* ./include/
+cp ~/script/start/include/* ./include/
 echo -e "Dossier include copié et complété
 "
 mkdir src
-cp ~/epitech/script/start/src/* ./src/
+cp ~/script/start/src/* ./src/
 echo -e "dossier src créé et complété
 \033[0m"
 
-cp ~/epitech/script/start/Makefile .
+cp ~/script/start/Makefile .
 mkdir lib my
 
 mv my lib/
 cd lib/my/
-cp ~/epitech/librairy/*.c .
-cp ~/epitech/librairy/Makefile .
+cp ~/script/librairy/*.c .
+cp ~/script/librairy/Makefile .
 mkdir include
-cp ~/epitech/librairy/include/* include/
+cp ~/script/librairy/include/* include/
 make re -s
 make clean -s
 cd ../../
